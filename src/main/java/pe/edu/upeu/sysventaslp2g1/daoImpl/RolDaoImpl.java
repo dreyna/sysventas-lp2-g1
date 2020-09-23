@@ -2,7 +2,6 @@ package pe.edu.upeu.sysventaslp2g1.daoImpl;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -25,6 +24,7 @@ private JdbcTemplate jdbcTemplate;
 	@Override
 	public int update(Rol r) {
 		// TODO Auto-generated method stub
+		System.out.println(r.getIdrol()+" / "+r.getNomrol());
 		String SQL ="update rol set nomrol=? where idrol=?";
 		return jdbcTemplate.update(SQL, r.getNomrol(),r.getIdrol());
 	}

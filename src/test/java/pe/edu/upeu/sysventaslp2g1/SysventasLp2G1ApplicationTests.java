@@ -14,12 +14,12 @@ private RolDao rolDao;
 	@Test
 	void contextLoads() {
 		Rol r = new Rol();
-		//r.setIdrol(2);
-		r.setNomrol("Henry Orbezo");
+		r.setIdrol(3);
+		r.setNomrol("GV");
 		/*
 		r.setNomrol("Henry");*/
 		//System.out.println(rolDao.create(r));
-	System.out.println(rolDao.create(r));
+	System.out.println(rolDao.update(r));
 	}
 
 }
