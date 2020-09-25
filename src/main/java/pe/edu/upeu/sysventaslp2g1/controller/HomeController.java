@@ -9,5 +9,9 @@ public class HomeController {
 	public String mensaje() {
 		return "Bienvenidos a Microservicios Síncronos";
 	}
+	@GetMapping("/hola")
+	public String mensaje2() {
+		return "Bienvenidos a Microservicios Síncronos";
+	}
 
 }
