@@ -27,7 +27,14 @@ public List<Map<String, Object>> lista(){
 }
 @GetMapping("/{id}")
 public Rol read(@PathVariable int id ) {
-	return rolService.read(id);
+	try {
+		 return rolService.read(id);
+	} catch (Exception e) {
+		// TODO: handle exception
+		System.out.println("error");
+		return null;
+	}
+
 }
 @DeleteMapping("/delete/{id}")
 public int delete(@PathVariable int id ) {
